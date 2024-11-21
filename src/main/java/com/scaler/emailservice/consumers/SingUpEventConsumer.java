@@ -29,11 +29,12 @@ public class SingUpEventConsumer {
         SignUpEventDTO signUpEventDTO = objectMapper.readValue(
                 message, SignUpEventDTO.class);
 
+        System.out.println("Consuming body");
         String to = signUpEventDTO.getTo();
         String from = signUpEventDTO.getFrom();
         String subject = signUpEventDTO.getSubject();
         String body = signUpEventDTO.getBody();
-
+        System.out.println(body);
 
         System.out.println("TLSEmail Start");
         Properties props = new Properties();
@@ -46,7 +47,7 @@ public class SingUpEventConsumer {
         Authenticator auth = new Authenticator() {
             //override the getPasswordAuthentication method
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(from, "vpgjointtmsplidl");
+                return new PasswordAuthentication(from, "ondnelllmejravkr");
             }
         };
         Session session = Session.getInstance(props, auth);
