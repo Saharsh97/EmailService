@@ -47,7 +47,7 @@ public class SingUpEventConsumer {
         Authenticator auth = new Authenticator() {
             //override the getPasswordAuthentication method
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(from, "ondnelllmejravkr");
+                return new PasswordAuthentication(from, "dqnlsklbyfrgfryl");
             }
         };
         Session session = Session.getInstance(props, auth);
